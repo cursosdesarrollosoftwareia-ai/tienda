@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teclado mecánico compacto",
+    "precio": 89.99,
+    "descripcion": "Teclado mecánico retroiluminado con distribución compacta.",
+    "imagen": "https://example.com/teclado-mecanico.jpg",
+    "stock": 12
+  },
+  {
+    "id": 2,
+    "nombre": "Ratón inalámbrico ergonómico",
+    "precio": 34.5,
+    "descripcion": "Ratón inalámbrico con sensor de alta precisión y diseño ergonómico.",
+    "imagen": "https://example.com/raton-ergonomico.jpg",
+    "stock": 25
+  },
+  {
+    "id": 3,
+    "nombre": "Alfombrilla de escritorio XL",
+    "precio": 19.99,
+    "descripcion": "Superficie amplia antideslizante para teclado y ratón.",
+    "imagen": "https://example.com/alfombrilla-xl.jpg",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "nombre": "Hub USB-C de 7 puertos",
+    "precio": 42,
+    "descripcion": "Adaptador USB-C con puertos USB, HDMI y lector de tarjetas.",
+    "imagen": "https://example.com/hub-usb-c.jpg",
+    "stock": 8
+  }
+]
