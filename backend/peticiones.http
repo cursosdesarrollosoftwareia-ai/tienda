@@ -1,0 +1,81 @@
+@baseUrl = http://localhost:3001
+@productosUrl = {{baseUrl}}/api/productos
+
+### Éxito: listar productos (200)
+GET {{productosUrl}}
+
+### Éxito: obtener un producto existente (200)
+GET {{productosUrl}}/1
+
+### Error: el producto no existe (404)
+GET {{productosUrl}}/99999
+
+### Éxito: crear un producto (201)
+POST {{productosUrl}}
+Content-Type: application/json
+
+{
+  "nombre": "Webcam HD",
+  "precio": 54.99,
+  "descripcion": "Webcam HD con micrófono integrado.",
+  "imagen": "https://example.com/webcam-hd.jpg",
+  "stock": 10
+}
+
+### Error: faltan campos obligatorios (400)
+POST {{productosUrl}}
+Content-Type: application/json
+
+{
+  "nombre": "Producto incompleto"
+}
+
+### Error: precio y stock fuera de rango (400)
+POST {{productosUrl}}
+Content-Type: application/json
+
+{
+  "nombre": "Producto inválido",
+  "precio": 0,
+  "descripcion": "Ejemplo de datos inválidos.",
+  "imagen": "https://example.com/invalido.jpg",
+  "stock": -1
+}
+
+### Éxito: reemplazar un producto existente (200)
+PUT {{productosUrl}}/1
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecánico compacto actualizado",
+  "precio": 94.99,
+  "descripcion": "Teclado mecánico compacto retroiluminado.",
+  "imagen": "https://example.com/teclado-actualizado.jpg",
+  "stock": 9
+}
+
+### Error: faltan campos obligatorios al reemplazar (400)
+PUT {{productosUrl}}/1
+Content-Type: application/json
+
+{
+  "nombre": "Actualización incompleta"
+}
+
+### Error: intentar reemplazar un producto inexistente (404)
+PUT {{productosUrl}}/99999
+Content-Type: application/json
+
+{
+  "nombre": "Producto inexistente",
+  "precio": 12.5,
+  "descripcion": "Este producto no está en el catálogo.",
+  "imagen": "https://example.com/no-existe.jpg",
+  "stock": 1
+}
+
+### Éxito: eliminar un producto existente (204)
+DELETE {{productosUrl}}/4
+
+### Error: intentar eliminar un producto inexistente (404)
+DELETE {{productosUrl}}/99999

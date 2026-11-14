@@ -30,5 +30,13 @@
     "descripcion": "Adaptador USB-C con puertos USB, HDMI y lector de tarjetas.",
     "imagen": "https://example.com/hub-usb-c.jpg",
     "stock": 8
+  },
+  {
+    "id": 5,
+    "nombre": "Webcam HD",
+    "precio": 54.99,
+    "descripcion": "Webcam HD con micrófono integrado.",
+    "imagen": "https://example.com/webcam-hd.jpg",
+    "stock": 10
   }
 ]
